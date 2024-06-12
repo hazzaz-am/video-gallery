@@ -1,10 +1,10 @@
 // import Success from "../ui/Success";
 import { useState } from "react";
 import { useAddVideoMutation } from "../../features/api/apiSlice";
+import Error from "../ui/Error";
+import Success from "../ui/Success";
 import TextArea from "../ui/TextArea";
 import TextInput from "../ui/TextInput";
-import Success from "../ui/Success";
-import Error from "../ui/Error";
 
 export default function Form() {
 	const [addVideo, { isLoading, isError, isSuccess }] = useAddVideoMutation();
@@ -124,7 +124,7 @@ export default function Form() {
 				</div>
 
 				{isSuccess && <Success message="Video was added successfully" />}
-                {!isLoading && isError && <Error message="Video add cause an error"/>}
+				{!isLoading && isError && <Error message="Video add cause an error" />}
 			</div>
 		</form>
 	);

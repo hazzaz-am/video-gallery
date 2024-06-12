@@ -30,7 +30,9 @@ export default function RelatedVideos({ id, title }) {
 	}
 
 	if (!isLoading && !isError && relatedVideos.length > 0) {
-		content = relatedVideos.map((video) => <RelatedVideo video={video} />);
+		content = relatedVideos.map((video) => (
+			<RelatedVideo key={video.id} video={video} />
+		));
 	}
 
 	return (
