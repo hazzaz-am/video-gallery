@@ -4,9 +4,8 @@ import Error from "../ui/Error";
 import Form from "./Form";
 
 export default function EditVideo() {
-	const {videoId} = useParams()
+	const { videoId } = useParams();
 	const { data: video, isLoading, isError } = useGetSingleVideoQuery(videoId);
-
 
 	let content = null;
 

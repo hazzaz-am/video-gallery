@@ -28,7 +28,6 @@ export default function Form({ video }) {
 	const [views, setViews] = useState(initialviews);
 	const [link, setLink] = useState(initiallink);
 
-
 	const handleEditedVideo = (e) => {
 		e.preventDefault();
 		editVideo({
